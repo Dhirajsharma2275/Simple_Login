@@ -1,7 +1,6 @@
 import { useState } from 'react'
-
-
-function Navbar() {
+import { Link } from 'react-router-dom';
+function Navbar(props) {
     const[Style,SetStyle]=useState({
     backgroundColor: '#111111',
     color: 'White',
@@ -11,10 +10,9 @@ function Navbar() {
   return (
     <>
       <div className='flex font-bold justify-around h-20 items-center' style={Style}>
-        <p>NavBar</p>
+        <p>Mr. Coder</p>
         <ul className='flex gap-5'>
-            <li className='cursor-pointer'><link rel="stylesheet" href="/About" />About</li>
-            <li className='cursor-pointer'><a href="/login">Login</a></li>
+            <li className='cursor-pointer'><Link to='/login'>Login</Link></li>
         </ul>
       </div>
     </>

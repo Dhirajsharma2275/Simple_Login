@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-
+import Projects from './Components/Projects';
+import { Link } from 'react-router-dom';
+import Card from './Components/Card';
 import Navbar from './Components/Navbar'
+import picture from './Components/Img/picture.png'
+import Footer from './Components/Footer';
 
 function App() {
   const[Style,SetStyle]=useState({
@@ -14,7 +18,7 @@ function App() {
     <>
      <div className="body bg-red-500 h-155 flex" style={Style}>
         <div className='flex justify-center items-center h-full w-1/2'>
-          <img src="src/Components/Img/i-love-coding-dark-3840x1080-16016 (1).png" alt="" />
+          <img src={picture} alt="" />
         </div>
         <div className="texts text-white h-full w-1/2 flex flex-col justify-center items-center">
           <p className='text-m font-semibold tracking-wide'>Hey!</p>
@@ -26,6 +30,9 @@ function App() {
           </div>
         </div>
      </div>
+     <Card/>
+     <Projects/>
+     
     </>
   )
 }
